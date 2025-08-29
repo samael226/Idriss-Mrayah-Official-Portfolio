@@ -1,0 +1,121 @@
+.container {
+  /* Add global container styles if needed */
+}
+
+.mainContent {
+  /* Styles for the main content area, e.g., padding */
+  padding-top: 7rem; /* Adjusted padding to match other sections */
+  min-height: 100vh;
+  display: flex; /* Added flex display */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  /* Removed justify-content: center; as we want content to flow */
+  gap: 2rem; /* Added gap between sections, adjust as needed */
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.heroSection {
+  /* Styles for the hero section */
+  min-height: 100vh;
+  width: 100%; /* Explicitly set width to 100% */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  padding: 0 2rem; /* Increased horizontal padding */
+  position: relative;
+  overflow: hidden; /* Ensure 3D canvas is clipped if needed */
+  background: linear-gradient(-45deg, var(--background-dark) 0%, rgba(var(--accent-purple), 0.2) 25%, var(--background-dark) 50%, rgba(var(--accent-pink), 0.2) 75%, var(--background-dark) 100%);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+  border-bottom: 1px solid rgba(var(--subtle-accent), 0.3); /* Subtle bottom border */
+}
+
+.heroWith3D {
+  /* Specific styles for hero section when 3D is present */
+  overflow: hidden; /* Hide any overflow from the 3D canvas */
+  height: 100vh;
+  width: 100vw;
+}
+
+.heroContent {
+  /* Styles for the text content within the hero section */
+  position: absolute;
+  z-index: 10;
+  color: rgb(var(--foreground-rgb)); /* Use foreground color */
+  max-width: 1000px; /* Adjusted max width to standard unit */
+  margin: 0 auto; /* Center the content block */
+  padding: 2rem; /* Add some internal padding */
+  background-color: rgba(var(--background-start-rgb), 0); /* Make background slightly more opaque for readability */
+  border-radius: 8px;
+  backdrop-filter: blur(8px); /* Increased subtle blur */
+}
+
+.heroHeading {
+  font-size: 4.5rem; /* Larger heading */
+  font-weight: 800; /* Bolder */
+  margin-bottom: 1rem; /* Adjusted margin */
+  color: rgb(var(--accent-purple)); /* Accent color for heading */
+  text-transform: uppercase;
+  letter-spacing: 4px; /* More letter spacing */
+  text-shadow: 0 0 15px rgba(var(--accent-purple), 0.9); /* More prominent glow */
+  line-height: 1.1; /* Adjust line height */
+}
+
+.heroSubHeading {
+  font-size: 2rem; /* Larger subheading */
+  margin-bottom: 2rem; /* Adjusted margin */
+  color: rgb(var(--accent-pink)); /* Use pink accent */
+  letter-spacing: 2px; /* Increased letter spacing */
+  font-weight: 600;
+}
+
+.heroDescription {
+  font-size: 1.2rem; /* Adjusted font size */
+  color: rgba(var(--foreground-rgb), 0.8); /* Slightly less bright */
+  max-width: 700px; /* Adjusted max width */
+  margin: 0.5rem auto 0 auto; /* Center the description and adjust top margin */
+  line-height: 1.6;
+}
+
+/* Styles for the 3D canvas container */
+.canvasSizer {
+  width: 100vw; /* Set width to 100% of viewport width */
+  height: 100vh; /* Set height to 100% of viewport height */
+  /* You can add more styling here like margin, position, etc. */
+  z-index: 2;
+}
+
+/* Styles for the 3D canvas element itself */
+.heroSection canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1; /* Ensure canvas is behind content */
+  /* background-color: red; REMOVED TEMPORARY BACKGROUND */
+}
+
+/* Add responsive adjustments if necessary */
+@media (min-width: 768px) {
+  .heroHeading {
+    font-size: 6rem; /* Even larger heading on wider screens */
+  }
+  .heroSubHeading {
+    font-size: 2.8rem; /* Larger subheading on wider screens */
+  }
+  .heroDescription {
+    font-size: 1.4rem; /* Larger description on wider screens */
+  }
+}
+
+.canvas{
+  height: 100vh;
+  width: 100vw;
+} 

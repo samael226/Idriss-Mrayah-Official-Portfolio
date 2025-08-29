@@ -1,0 +1,122 @@
+.projectsSection {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: rgba(var(--background-start-rgb), 0.7); /* More opaque */
+  border-top: 1px solid rgba(var(--subtle-accent), 0.3); /* Subtle top border */
+  border-bottom: 1px solid rgba(var(--subtle-accent), 0.3); /* Subtle bottom border */
+}
+
+.heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem; /* Increased margin */
+  text-align: center;
+  color: rgb(var(--accent-purple)); /* Use purple accent for headings */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px rgba(var(--accent-purple), 0.5); /* Subtle glow */
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger min width */
+  gap: 3rem; /* Increased gap */
+  max-width: 8xl; /* Wider max width */
+  margin: 0 auto; /* Center the grid container */
+  padding: 0 2rem; /* Increased padding */
+  justify-items: center; /* Center items within the grid */
+}
+
+.projectCard {
+  background-color: rgba(var(--background-end-rgb), 0.9); /* More opaque background */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* More prominent shadow */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgba(var(--subtle-accent), 0.4); /* Use subtle accent border */
+}
+
+.projectCard:hover {
+  transform: translateY(-10px); /* More pronounced lift */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Larger shadow */
+  border-color: rgb(var(--accent-blue)); /* Accent border on hover */
+}
+
+.projectImageContainer {
+  width: 100%;
+  height: 240px; /* Taller image container */
+  position: relative;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  object-fit: contain;
+  border-radius: 50%
+}
+
+.projectContent {
+  padding: 2rem; /* Increased padding */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectTitle {
+  font-size: 1.8rem; /* Larger title */
+  font-weight: 700; /* Bolder */
+  margin-bottom: 0.8rem; /* Increased margin */
+  color: rgb(var(--accent-purple));
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.projectDescription {
+  font-size: 1.1rem; /* Slightly larger font */
+  color: rgba(var(--foreground-rgb), 0.85); /* Brighter text */
+  margin-bottom: 1.8rem; /* Increased margin */
+  flex-grow: 1;
+  line-height: 1.6;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem; /* Increased gap */
+  margin-bottom: 1.8rem; /* Increased margin */
+  justify-content: center; /* Center tech items */
+}
+
+.techItem {
+  background-color: rgba(var(--subtle-accent), 0.3); /* More subtle accent background */
+  color: rgb(var(--foreground-rgb)); /* Use foreground color */
+  padding: 0.4rem 1rem; /* Adjust padding */
+  border-radius: 9999px;
+  font-size: 0.95rem; /* Slightly larger font */
+  border: 1px solid rgba(var(--accent-blue), 0.5); /* Stronger accent border */
+}
+
+.projectLinks {
+  display: flex;
+  gap: 2rem; /* Increased gap */
+  margin-top: 2rem; /* Increased margin */
+  justify-content: center; /* Center project links */
+}
+
+.projectLink {
+  color: rgb(var(--accent-pink));
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.projectLink:hover {
+  color: rgb(var(--accent-blue));
+  text-shadow: 0 0 12px rgba(var(--accent-blue), 0.9); /* More prominent glow */
+} 

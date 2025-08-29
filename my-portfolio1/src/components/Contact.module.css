@@ -1,0 +1,189 @@
+.contactSection {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: rgba(var(--background-start-rgb), 0.7);
+  border-top: 1px solid rgba(var(--subtle-accent), 0.3);
+  border-bottom: 1px solid rgba(var(--subtle-accent), 0.3);
+}
+
+.heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  color: rgb(var(--accent-pink)); /* Use pink accent for heading */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px rgba(var(--accent-pink), 0.5); /* Subtle glow */
+}
+
+.contactInfoHeading{
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: rgb(var(--accent-pink)); /* Use pink accent for heading */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px rgba(var(--accent-pink), 0.5); /* Subtle glow */
+}
+
+.container {
+  max-width: 1200px; /* Adjusted max width */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem; /* Adjusted padding */
+  padding-right: 1.5rem; /* Adjusted padding */
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem; /* Increased gap */
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem; /* Larger gap on wider screens */
+  }
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  gap: 1.8rem; /* Increased gap */
+  padding: 2rem; /* Increased padding */
+  background-color: rgba(var(--background-end-rgb), 0.8); /* More opaque background */
+  border-radius: 0.75rem; /* Slightly larger radius */
+  border: 1px solid rgba(var(--accent-blue), 0.3); /* Stronger accent border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add initial shadow */
+}
+
+.linktreeLink {
+  display: block;
+  text-align: center;
+  color: rgb(var(--foreground-rgb));
+  /* Further styling for the link if needed */
+}
+
+.linktreeQR {
+  border-radius: 8px; /* Optional: round the corners of the QR code image */
+  border: 5px solid var(--accent-purple); /* Optional: add a border */
+  box-shadow: 0 0 20px rgba(var(--accent-purple), 0.5); /* Optional: add a glow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: white;
+}
+
+.linktreeQR:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 0 30px rgba(var(--accent-purple), 0.8); /* More prominent glow on hover */
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* Increased gap */
+  color: rgb(var(--foreground-rgb)); /* Use foreground color */
+  font-size: 1.1rem; /* Slightly smaller base font */
+}
+
+.infoIcon {
+  font-size: 1.8rem; /* Larger icon */
+  color: rgb(var(--accent-purple)); /* Accent color for icons */
+}
+
+/* .infoText {
+    /* No changes needed, base font size on infoItem 
+
+
+} */
+
+.socialLinks {
+  display: flex;
+  gap: 1.8rem; /* Increased gap */
+  margin-top: 2.5rem; /* Increased margin */
+}
+
+.socialLink {
+  color: rgb(var(--foreground-rgb)); /* Use foreground color for initial state */
+  font-size: 2rem; /* Larger icon */
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.socialLink:hover {
+  color: rgb(var(--accent-pink)); /* Accent color on hover */
+  text-shadow: 0 0 10px rgba(var(--accent-pink), 0.8); /* More prominent glow */
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem; /* Increased padding */
+  background-color: rgba(var(--background-end-rgb), 0.8); /* More opaque background */
+  border-radius: 0.75rem; /* Slightly larger radius */
+  border: 1px solid rgba(var(--accent-blue), 0.3); /* Stronger accent border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add initial shadow */
+}
+
+.formGroup {
+  margin-bottom: 1.2rem; /* Increased margin */
+}
+
+.label {
+  display: block;
+  font-size: 1.1rem; /* Slightly larger font */
+  color: rgb(var(--accent-blue)); /* Use accent color for labels */
+  margin-bottom: 0.6rem; /* Increased margin */
+  text-transform: uppercase;
+  letter-spacing: 0.8px; /* Increased letter spacing */
+  font-weight: 600;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  max-width: 400px; /* Limit the maximum width */
+  margin: 0 auto; /* Center the input/textarea */
+  padding: 1rem; /* Increased padding */
+  background-color: rgba(var(--background-start-rgb), 0.6); /* Darker input background */
+  border: 1px solid rgba(var(--subtle-accent), 0.5); /* Use subtle accent border */
+  border-radius: 0.25rem;
+  color: rgb(var(--foreground-rgb));
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: rgb(var(--accent-blue)); /* Accent color on focus */
+  box-shadow: 0 0 10px rgba(var(--accent-blue), 0.7); /* More prominent glow on focus */
+}
+
+.textarea {
+  min-height: 180px; /* Taller textarea */
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: rgb(var(--accent-pink)); /* Pink accent for button */
+  color: rgb(var(--background-start-rgb)); /* Dark text for button */
+  font-weight: bold;
+  padding: 1rem 2.5rem; /* Increased padding */
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  font-size: 1.2rem; /* Larger font */
+  text-transform: uppercase;
+  letter-spacing: 1.2px; /* Increased letter spacing */
+}
+
+.submitButton:hover {
+  background-color: rgb(var(--accent-purple)); /* Different accent color on hover */
+  box-shadow: 0 0 15px rgba(var(--accent-purple), 0.8); /* More prominent glow on hover */
+} 

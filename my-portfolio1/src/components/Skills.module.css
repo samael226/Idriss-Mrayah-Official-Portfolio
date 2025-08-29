@@ -1,0 +1,66 @@
+.skillsSection {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  text-align: center;
+  background-color: rgba(var(--background-end-rgb), 0.6); /* Subtle background */
+  border-top: 1px solid rgba(var(--subtle-accent), 0.3); /* Subtle top border */
+  border-bottom: 1px solid rgba(var(--subtle-accent), 0.3); /* Subtle bottom border */
+}
+
+.heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  color: rgb(var(--accent-blue));
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px rgba(var(--accent-blue), 0.5); /* Subtle glow */
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Increased min width */
+  gap: 2.5rem;
+  max-width: 1200px; /* Adjusted max width to standard unit */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem; /* Adjusted padding */
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Increased gap */
+  padding: 1.8rem; /* Increased padding */
+  background-color: rgba(var(--background-start-rgb), 0.8); /* More opaque background */
+  border-radius: 0.75rem; /* Slightly larger radius */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  border: 1px solid rgba(var(--accent-blue), 0.3); /* Stronger accent border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add initial shadow */
+}
+
+.skillItem:hover {
+  transform: translateY(-7px); /* More pronounced lift */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Larger shadow */
+  border-color: rgb(var(--accent-blue)); /* Accent border on hover */
+}
+
+.skillIcon {
+  width: 3.5rem; /* Larger icon */
+  height: 3.5rem; /* Larger icon */
+  color: rgb(var(--accent-purple)); /* Accent color for icons */
+  transition: color 0.3s ease-in-out;
+}
+
+.skillItem:hover .skillIcon {
+    color: rgb(var(--accent-pink)); /* Different accent color on icon hover */
+}
+
+.skillName {
+  font-size: 1.1rem; /* Slightly larger font */
+  color: rgb(var(--foreground-rgb)); /* Use foreground color */
+  font-weight: 600; /* Bolder */
+  text-transform: uppercase;
+  letter-spacing: 0.8px; /* Increased letter spacing */
+} 

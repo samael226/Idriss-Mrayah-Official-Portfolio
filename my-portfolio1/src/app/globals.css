@@ -1,0 +1,57 @@
+:root {
+  --background-start-rgb: 8, 8, 15;  /* Very dark blue-purple */
+  --background-end-rgb: 3, 3, 8;      /* Near black */
+  --foreground-rgb: 220, 220, 240;   /* Slightly brighter text */
+
+  /* Refined Cyberpunk Accent Colors */
+  --accent-purple: 180, 140, 255; /* Brighter purple */
+  --accent-pink: 255, 50, 150;     /* Brighter pink */
+  --accent-blue: 0, 220, 255;     /* Brighter cyan */
+
+  /* Subtle Accent for borders/details */
+  --subtle-accent: 50, 60, 80; /* Dark grey-blue */
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+  line-height: 1.6; /* Improved readability */
+  -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+  -moz-osx-font-smoothing: grayscale; /* Smoother font rendering */
+}
+
+/* Custom scrollbar - Refine colors slightly */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-start-rgb)); /* Match track to background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--subtle-accent)); /* Use subtle accent for thumb */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--subtle-accent), 0.8); /* Slightly lighter on hover */
+}
+
+/* Basic link styling */
+a {
+  color: rgb(var(--accent-purple));
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: rgb(var(--accent-pink));
+}
